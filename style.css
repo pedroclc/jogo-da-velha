@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 100% da altura da tela */
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: #92e9af;
+  padding: 0px 0px;
+  /* border-radius: 10px; */
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  background-color: white;
+  padding: 80px 80px;
+  /* border-radius: 10px; */
+}
+
+.hide {
+  display: none;
+}
+
+#gameStatus {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  background-color: #6a8d73;
+  padding: 20px 100px; /* 20px para cima e para baixo / 100px para os lados */
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #6a8d73;
+  padding: 30px 40px;
+  border-radius: 10px;
+}
+
+form > input {
+  padding: 10px;
+  border-radius: 10px;
+  border: solid 1px;
+  margin: 20px 0;
+}
+
+#a11 {
+  border-right: solid 3px;
+  border-bottom: solid 3px;
+}
+
+#a12 {
+  border-right: solid 3px;
+  border-bottom: solid 3px;
+}
+
+#a13 {
+  border-bottom: solid 3px;
+}
+
+#a21 {
+  border-right: solid 3px;
+  border-bottom: solid 3px;
+}
+
+#a22 {
+  border-right: solid 3px;
+  border-bottom: solid 3px;
+}
+
+#a23 {
+  border-bottom: solid 3px;
+}
+
+#a31 {
+  border-right: solid 3px;
+}
+
+#a32 {
+  border-right: solid 3px;
+}

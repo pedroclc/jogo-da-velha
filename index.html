@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <article id="startScreen" class="">
+      <h1>Jogo da velha</h1>
+      <form>
+        <label>Nomes dos jogadores</label>
+        <input id="inputName1" type="text" placeholder="Nome do jogador 1" />
+        <input id="inputName2" type="text" placeholder="Nome do jogador 2" />
+        <button id="btnStart">Jogar!</button>
+      </form>
+    </article>
+    <article id="gameScreen">
+      <section id="gameStatus">
+        <p>Olá, <span id="name1"></span> e <span id="name2"></span>!</p>
+        <p>A próxima jogada é de <span id="nextPlay"></span>.</p>
+      </section>
+      <section>
+        <div id="a11">1</div>
+        <div id="a12">2</div>
+        <div id="a13">3</div>
+      </section>
+      <section>
+        <div id="a21">4</div>
+        <div id="a22">5</div>
+        <div id="a23">6</div>
+      </section>
+      <section>
+        <div id="a31">7</div>
+        <div id="a32">8</div>
+        <div id="a33">9</div>
+      </section>
+    </article>
+
+    <script src="./js/logic.js"></script>
+    <!-- lógica (OOP) -->
+    <script src="./js/dom.js"></script>
+    <!-- DOM conversar com o HTML e o CSS -->
+  </body>
+</html>
