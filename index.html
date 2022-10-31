@@ -12,30 +12,36 @@
       <h1>Jogo da velha</h1>
       <form>
         <label>Nomes dos jogadores</label>
-        <input id="inputName1" type="text" placeholder="Nome do jogador 1" />
-        <input id="inputName2" type="text" placeholder="Nome do jogador 2" />
+        <section>
+          <input id="inputName1" type="text" placeholder="Nome do jogador 1" />
+          <img src="./img/x.jpg" alt="" />
+        </section>
+        <section>
+          <input id="inputName2" type="text" placeholder="Nome do jogador 2" />
+          <img src="./img/bola.jpg" alt="" />
+        </section>
         <button id="btnStart">Jogar!</button>
       </form>
     </article>
-    <article id="gameScreen">
+    <article id="gameScreen" class="hide">
       <section id="gameStatus">
         <p>Olá, <span id="name1"></span> e <span id="name2"></span>!</p>
         <p>A próxima jogada é de <span id="nextPlay"></span>.</p>
       </section>
       <section>
-        <div id="a11">11</div>
-        <div id="a12">12</div>
-        <div id="a13">13</div>
+        <div id="a00"><img src="./img/white-background.png" alt="" /></div>
+        <div id="a01"><img src="./img/white-background.png" alt="" /></div>
+        <div id="a02"><img src="./img/white-background.png" alt="" /></div>
       </section>
       <section>
-        <div id="a21">21</div>
-        <div id="a22">22</div>
-        <div id="a23">23</div>
+        <div id="a10"><img src="./img/white-background.png" alt="" /></div>
+        <div id="a11"><img src="./img/white-background.png" alt="" /></div>
+        <div id="a12"><img src="./img/white-background.png" alt="" /></div>
       </section>
       <section>
-        <div id="a31">31</div>
-        <div id="a32">32</div>
-        <div id="a33">33</div>
+        <div id="a20"><img src="./img/white-background.png" alt="" /></div>
+        <div id="a21"><img src="./img/white-background.png" alt="" /></div>
+        <div id="a22"><img src="./img/white-background.png" alt="" /></div>
       </section>
     </article>
 

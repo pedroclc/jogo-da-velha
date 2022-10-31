@@ -30,6 +30,12 @@ div {
   /* border-radius: 10px; */
 }
 
+img {
+  display: flex;
+  align-content: center;
+  background-size: cover;
+}
+
 .hide {
   display: none;
 }
@@ -59,29 +65,29 @@ form > input {
   margin: 20px 0;
 }
 
-#a22 {
+#a11 {
   border-left: solid 3px;
   border-right: solid 3px;
   border-top: solid 3px;
   border-bottom: solid 3px;
+}
+
+#a01 {
+  border-left: solid 3px;
+  border-right: solid 3px;
 }
 
 #a12 {
-  border-left: solid 3px;
-  border-right: solid 3px;
-}
-
-#a23 {
   border-top: solid 3px;
   border-bottom: solid 3px;
 }
 
-#a32 {
+#a21 {
   border-left: solid 3px;
   border-right: solid 3px;
 }
 
-#a21 {
+#a10 {
   border-top: solid 3px;
   border-bottom: solid 3px;
 }
