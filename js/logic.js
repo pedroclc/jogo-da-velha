@@ -1,17 +1,18 @@
 // Criar classe "Jogo da velha"
-class jogoDaVelha {
+class JogoDaVelha {
   constructor() {
     this.player1 = "";
     this.player2 = "";
-    this.bola = "./img/bola.jpg";
-    this.bola = "./img/x.jpg";
     this.count = 0;
+    this.images = ["./img/branco.png", "./img/bola.jpg", "./img/x.jpg"];
     this.arrGameStatus = [
       [undefined, undefined, undefined],
       [undefined, undefined, undefined],
       [undefined, undefined, undefined],
     ];
   }
+
+  // início da partida
 }
 
 // Método para iniciar jogo

@@ -1,4 +1,4 @@
-const match = new jogoDaVelha();
+const match = new JogoDaVelha();
 
 const startScreen = document.getElementById("startScreen");
 const inputName1 = document.querySelector("#inputName1");
@@ -26,6 +26,47 @@ btnStart.addEventListener("click", (event) => {
   match.player2 = inputName2.value;
   gamePlayer2.innerText = match.player2;
   nextPlay.innerText = match.player1;
+
+  settingUpGame();
 });
 
 // inicio da partida
+const allImages = document.querySelectorAll(".imagem");
+const indices = new Array();
+const copiaImagens = allImages.forEach((img) => {
+  indices.push(img.id);
+});
+//console.log(indices);
+
+function settingUpGame() {
+  allImages.forEach((img) => {
+    img.addEventListener(
+      "click",
+      () => {
+        img.src = "./img/bola.jpg";
+        console.log("clicou");
+
+        //indices.splice(Number(img.id), 1);
+        //console.log(indices);
+
+        //console.log(img.id);
+        //console.log(allImages);
+      },
+      {
+        once: true,
+      }
+    );
+  });
+
+  allImages.forEach((img) => {
+    img.addEventListener("mouseover", () => {
+      img.src = "./img/bola.jpg"; //;
+    });
+  });
+
+  allImages.forEach((img) => {
+    img.addEventListener("mouseout", () => {
+      img.src = "./img/branco.png";
+    });
+  });
+}

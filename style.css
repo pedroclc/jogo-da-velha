@@ -16,24 +16,32 @@ section {
   display: flex;
   flex-direction: row;
   text-align: center;
-  background-color: #92e9af;
+  background-color: white;
   padding: 0px 0px;
   /* border-radius: 10px; */
 }
 
-div {
+.tabuleiro > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 150px;
+  width: 150px;
+}
+
+/* div {
   display: flex;
   flex-direction: row;
   text-align: center;
   background-color: white;
   padding: 80px 80px;
-  /* border-radius: 10px; */
-}
+  border-radius: 10px;
+} */
 
 img {
-  display: flex;
-  align-content: center;
   background-size: cover;
+  height: 148px;
+  width: 148px;
 }
 
 .hide {
@@ -66,28 +74,79 @@ form > input {
 }
 
 #a11 {
-  border-left: solid 3px;
-  border-right: solid 3px;
-  border-top: solid 3px;
-  border-bottom: solid 3px;
+  border-left: solid 2px;
+  border-right: solid 2px;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
 }
 
 #a01 {
-  border-left: solid 3px;
-  border-right: solid 3px;
+  border-left: solid 2px;
+  border-right: solid 2px;
 }
 
 #a12 {
-  border-top: solid 3px;
-  border-bottom: solid 3px;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
 }
 
 #a21 {
-  border-left: solid 3px;
-  border-right: solid 3px;
+  border-left: solid 2px;
+  border-right: solid 2px;
 }
 
 #a10 {
-  border-top: solid 3px;
-  border-bottom: solid 3px;
+  border-top: solid 2px;
+  border-bottom: solid 2px;
 }
+
+/* #a00 {
+  border-right: solid 1.5px;
+  border-bottom: solid 1.5px;
+}
+
+#a01 {
+  border-left: solid 1.5px;
+  border-right: solid 1.5px;
+  border-bottom: solid 1.5px;
+}
+
+#a02 {
+  border-left: solid 1.5px;
+  border-bottom: solid 1.5px;
+}
+
+#a10 {
+  border-right: solid 1.5px;
+  border-top: solid 1.5px;
+  border-bottom: solid 1.5px;
+}
+
+#a11 {
+  border-left: solid 1.5px;
+  border-right: solid 1.5px;
+  border-top: solid 1.5px;
+  border-bottom: solid 1.5px;
+}
+
+#a12 {
+  border-left: solid 1.5px;
+  border-top: solid 1.5px;
+  border-bottom: solid 1.5px;
+}
+
+#a20 {
+  border-right: solid 1.5px;
+  border-top: solid 1.5px;
+}
+
+#a21 {
+  border-left: solid 1.5px;
+  border-right: solid 1.5px;
+  border-top: solid 1.5px;
+}
+
+#a22 {
+  border-left: solid 1.5px;
+  border-top: solid 1.5px;
+} */
