@@ -4,7 +4,7 @@ class JogoDaVelha {
     this.player1 = "";
     this.player2 = "";
     this.count = 0;
-    this.images = ["./img/branco.png", "./img/bola.jpg", "./img/x.jpg"];
+    this.images = ["./img/x.jpg", "./img/bola.jpg", "./img/branco.png"];
     this.arrGameStatus = [
       [undefined, undefined, undefined],
       [undefined, undefined, undefined],
@@ -12,7 +12,11 @@ class JogoDaVelha {
     ];
   }
 
-  // início da partida
+  fimDoJogo() {
+    if (this.count === 8) {
+      console.log("Fim do jogo: todas as casas foram preenchidas");
+    }
+  }
 }
 
 // Método para iniciar jogo

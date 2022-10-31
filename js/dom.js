@@ -38,35 +38,33 @@ const copiaImagens = allImages.forEach((img) => {
 });
 //console.log(indices);
 
+const indiceItens = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+
 function settingUpGame() {
   allImages.forEach((img) => {
-    img.addEventListener(
-      "click",
-      () => {
-        img.src = "./img/bola.jpg";
-        console.log("clicou");
-
-        //indices.splice(Number(img.id), 1);
-        //console.log(indices);
-
-        //console.log(img.id);
-        //console.log(allImages);
-      },
-      {
-        once: true,
+    img.addEventListener("click", () => {
+      match.fimDoJogo();
+      if (indiceItens.includes(Number(img.id))) {
+        img.src = match.images[match.count % 2];
+        match.count += 1;
+        indiceItens[Number(img.id)] = "";
       }
-    );
+    });
   });
 
   allImages.forEach((img) => {
     img.addEventListener("mouseover", () => {
-      img.src = "./img/bola.jpg"; //;
+      if (indiceItens.includes(Number(img.id))) {
+        img.src = match.images[match.count % 2]; //;
+      }
     });
   });
 
   allImages.forEach((img) => {
     img.addEventListener("mouseout", () => {
-      img.src = "./img/branco.png";
+      if (indiceItens.includes(Number(img.id))) {
+        img.src = "./img/branco.png";
+      }
     });
   });
 }
