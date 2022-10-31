@@ -59,38 +59,29 @@ form > input {
   margin: 20px 0;
 }
 
-#a11 {
+#a22 {
+  border-left: solid 3px;
   border-right: solid 3px;
+  border-top: solid 3px;
   border-bottom: solid 3px;
 }
 
 #a12 {
+  border-left: solid 3px;
   border-right: solid 3px;
-  border-bottom: solid 3px;
-}
-
-#a13 {
-  border-bottom: solid 3px;
-}
-
-#a21 {
-  border-right: solid 3px;
-  border-bottom: solid 3px;
-}
-
-#a22 {
-  border-right: solid 3px;
-  border-bottom: solid 3px;
 }
 
 #a23 {
+  border-top: solid 3px;
   border-bottom: solid 3px;
 }
 
-#a31 {
+#a32 {
+  border-left: solid 3px;
   border-right: solid 3px;
 }
 
-#a32 {
-  border-right: solid 3px;
+#a21 {
+  border-top: solid 3px;
+  border-bottom: solid 3px;
 }

@@ -3,7 +3,12 @@ class jogoDaVelha {
   constructor() {
     this.player1 = "";
     this.player2 = "";
-    this.arr = [];
+    this.count = 0;
+    this.arrGameStatus = [
+      [undefined, undefined, undefined],
+      [undefined, undefined, undefined],
+      [undefined, undefined, undefined],
+    ];
   }
 }
 
