@@ -25,18 +25,80 @@ class JogoDaVelha {
       ] = 2;
       //console.log("jogador 2");
     }
-    //console.log(this.arrGameStatus);
+    console.log(this.arrGameStatus);
   }
 
-  verificarVencedor(){
-    for (let i=0; i<=2; i++){
-      if (this.arrGameStatus[])
-      for (let j=0; j<=2)
+  verificarVencedor() {
+    for (let i = 0; i <= 2; i++) {
+      if (
+        this.arrGameStatus[i][0] === 1 &&
+        this.arrGameStatus[i][1] === 1 &&
+        this.arrGameStatus[i][2] === 1
+      ) {
+        //alert("O jogador 1 venceu A");
+        return 1;
+      } else if (
+        this.arrGameStatus[i][0] === 2 &&
+        this.arrGameStatus[i][1] === 2 &&
+        this.arrGameStatus[i][2] === 2
+      ) {
+        //alert("O jogador 2 venceu A");
+        return 2;
+      } else if (
+        this.arrGameStatus[0][i] === 1 &&
+        this.arrGameStatus[1][i] === 1 &&
+        this.arrGameStatus[2][i] === 1
+      ) {
+        //alert("O jogador 1 venceu");
+        return 1;
+      } else if (
+        this.arrGameStatus[0][i] === 2 &&
+        this.arrGameStatus[1][i] === 2 &&
+        this.arrGameStatus[2][i] === 2
+      ) {
+        //alert("O jogador 2 venceu");
+        return 2;
+      }
+    }
+    if (
+      this.arrGameStatus[0][0] === 1 &&
+      this.arrGameStatus[1][1] === 1 &&
+      this.arrGameStatus[2][2] === 1
+    ) {
+      //alert("O jogador 1 venceu");
+      return 1;
+    } else if (
+      this.arrGameStatus[0][0] === 2 &&
+      this.arrGameStatus[1][1] === 2 &&
+      this.arrGameStatus[2][2] === 2
+    ) {
+      //alert("O jogador 2 venceu");
+      return 2;
+    }
+    if (
+      this.arrGameStatus[0][2] === 1 &&
+      this.arrGameStatus[1][1] === 1 &&
+      this.arrGameStatus[2][0] === 1
+    ) {
+      //alert("O jogador 1 venceu");
+      return 1;
+    } else if (
+      this.arrGameStatus[0][2] === 2 &&
+      this.arrGameStatus[1][1] === 2 &&
+      this.arrGameStatus[2][0] === 2
+    ) {
+      //alert("O jogador 2 venceu");
+      return 2;
     }
   }
 
   fimDoJogo() {
-    if (this.count === 9) {
+    const temVencedor = this.verificarVencedor();
+    if (temVencedor === 1) {
+      alert(`O jogador ${this.player1} venceu`);
+    } else if (temVencedor === 2) {
+      alert(`O jogador ${this.player2} venceu`);
+    } else if (this.count === 9) {
       alert("Fim do jogo - Não houve vencecedor!");
       let resposta = confirm("Deseja iniciar uma nova partida?");
       if (resposta === "Ok") {
@@ -47,13 +109,3 @@ class JogoDaVelha {
     }
   }
 }
-
-// Método para iniciar jogo
-// Quem começa jogando? Sempre o usuário, sempre o computador, ou alterna (ou escolhe um aleatoriamente)?
-
-// Método para testar se o jogo acabou e, se for o caso, finalizar (dizer quem ganhou, ou se deu empate)
-// O jogo pode acabar de 2 maneiras: se alguém ganhar, ou quando todas as 9 casas são preenchidas sem um vencedor
-//Rodar esse método depois de todas as jogadas
-
-// Método para o computador jogar
-// Encontra todas as casas vazias, e o computador joga aleatoriamente em uma delas (se der tempo, pensar em uma solução melhor)

@@ -41,11 +41,20 @@ function settingUpGame() {
     img.addEventListener("click", () => {
       if (indiceItens.includes(Number(img.id))) {
         jogador = match.count % 2;
+
         img.src = match.images[jogador];
         match.count += 1;
         indiceItens[Number(img.id)] = "";
+
+        if (jogador === 1) {
+          nextPlay.innerText = match.player1;
+        }
+        if (jogador === 0) {
+          nextPlay.innerText = match.player2;
+        }
       }
       match.realizarJogada(jogador, Number(img.id));
+      //match.verificarVencedor();
       match.fimDoJogo();
     });
   });
