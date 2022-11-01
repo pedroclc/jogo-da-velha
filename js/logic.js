@@ -96,15 +96,27 @@ class JogoDaVelha {
     const temVencedor = this.verificarVencedor();
     if (temVencedor === 1) {
       alert(`O jogador ${this.player1} venceu`);
+      let jogarNovamente = confirm("Deseja jogar novamente?");
+      if (jogarNovamente === true) {
+        window.location.href = "/index.html";
+      } else {
+        alert("Jogo encerrrado");
+      }
     } else if (temVencedor === 2) {
       alert(`O jogador ${this.player2} venceu`);
+      let jogarNovamente = confirm("Deseja jogar novamente?");
+      if (jogarNovamente === true) {
+        window.location.href = "/index.html";
+      } else {
+        alert("Jogo encerrrado");
+      }
     } else if (this.count === 9) {
       alert("Fim do jogo - Não houve vencecedor!");
-      let resposta = confirm("Deseja iniciar uma nova partida?");
-      if (resposta === "Ok") {
-        alert("Jogar novamente!");
+      let jogarNovamente = confirm("Deseja jogar novamente?");
+      if (jogarNovamente === true) {
+        window.location.href = "/index.html";
       } else {
-        alert("Finalizar.");
+        alert("Jogo encerrrado");
       }
     }
   }
