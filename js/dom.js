@@ -32,23 +32,21 @@ btnStart.addEventListener("click", (event) => {
 
 // inicio da partida
 const allImages = document.querySelectorAll(".imagem");
-const indices = new Array();
-const copiaImagens = allImages.forEach((img) => {
-  indices.push(img.id);
-});
-//console.log(indices);
+let jogador;
 
 const indiceItens = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 function settingUpGame() {
   allImages.forEach((img) => {
     img.addEventListener("click", () => {
-      match.fimDoJogo();
       if (indiceItens.includes(Number(img.id))) {
-        img.src = match.images[match.count % 2];
+        jogador = match.count % 2;
+        img.src = match.images[jogador];
         match.count += 1;
         indiceItens[Number(img.id)] = "";
       }
+      match.realizarJogada(jogador, Number(img.id));
+      match.fimDoJogo();
     });
   });
 

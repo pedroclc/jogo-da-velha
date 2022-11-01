@@ -10,11 +10,40 @@ class JogoDaVelha {
       [undefined, undefined, undefined],
       [undefined, undefined, undefined],
     ];
+    this.arrVetor = ["00", "01", "02", "10", "11", "12", "20", "21", "22"];
+  }
+
+  realizarJogada(jogador, posicao) {
+    if (jogador === 0) {
+      this.arrGameStatus[Number(this.arrVetor[posicao][0])][
+        Number(this.arrVetor[posicao][1])
+      ] = 1;
+      //console.log("jogador 1");
+    } else {
+      this.arrGameStatus[Number(this.arrVetor[posicao][0])][
+        Number(this.arrVetor[posicao][1])
+      ] = 2;
+      //console.log("jogador 2");
+    }
+    //console.log(this.arrGameStatus);
+  }
+
+  verificarVencedor(){
+    for (let i=0; i<=2; i++){
+      if (this.arrGameStatus[])
+      for (let j=0; j<=2)
+    }
   }
 
   fimDoJogo() {
-    if (this.count === 8) {
-      console.log("Fim do jogo: todas as casas foram preenchidas");
+    if (this.count === 9) {
+      alert("Fim do jogo - Não houve vencecedor!");
+      let resposta = confirm("Deseja iniciar uma nova partida?");
+      if (resposta === "Ok") {
+        alert("Jogar novamente!");
+      } else {
+        alert("Finalizar.");
+      }
     }
   }
 }
