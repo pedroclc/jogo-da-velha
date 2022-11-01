@@ -95,7 +95,7 @@ class JogoDaVelha {
       alert(`O jogador ${this.player1} venceu`);
       let jogarNovamente = confirm("Deseja jogar novamente?");
       if (jogarNovamente === true) {
-        window.location.href = "/index.html";
+        window.location.reload();
       } else {
         alert("Jogo encerrrado");
       }
@@ -103,7 +103,7 @@ class JogoDaVelha {
       alert(`O jogador ${this.player2} venceu`);
       let jogarNovamente = confirm("Deseja jogar novamente?");
       if (jogarNovamente === true) {
-        window.location.href = "/index.html";
+        window.location.reload();
       } else {
         alert("Jogo encerrrado");
       }
@@ -112,7 +112,7 @@ class JogoDaVelha {
       let jogarNovamente = confirm("Deseja jogar novamente?");
 
       if (jogarNovamente === true) {
-        window.location.href = "/index.html";
+        window.location.reload();
       } else {
         alert("Jogo encerrrado");
       }
