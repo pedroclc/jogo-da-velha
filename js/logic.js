@@ -18,14 +18,11 @@ class JogoDaVelha {
       this.arrGameStatus[Number(this.arrVetor[posicao][0])][
         Number(this.arrVetor[posicao][1])
       ] = 1;
-      //console.log("jogador 1");
     } else {
       this.arrGameStatus[Number(this.arrVetor[posicao][0])][
         Number(this.arrVetor[posicao][1])
       ] = 2;
-      //console.log("jogador 2");
     }
-    console.log(this.arrGameStatus);
   }
 
   verificarVencedor() {
@@ -113,6 +110,7 @@ class JogoDaVelha {
     } else if (this.count === 9) {
       alert("Fim do jogo - Não houve vencecedor!");
       let jogarNovamente = confirm("Deseja jogar novamente?");
+
       if (jogarNovamente === true) {
         window.location.href = "/index.html";
       } else {
